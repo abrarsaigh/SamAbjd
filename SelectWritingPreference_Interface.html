@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Choose Interface</title>
+<style>
+  body, html {
+    background-image: url("{{ url_for('static', filename='SelectPreference_background.png') }}");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+.centered {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: flex;           /* Flexbox layout */
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+}
+.button1 {
+    margin: 5%;              /* Adds margin around each image */
+    cursor: pointer;
+    transition: transform 0.4s ease-in-out; /* Adds a smooth transition effect */
+}
+    .Restart {
+    display: flex;
+    top: 90%;
+    bottom: 0; /* Align to bottom */
+    left: 0; /* Align to right */
+    position: fixed; /* Fixed position ensures it stays at a specific location */
+
+    text-align: center;
+        }
+
+
+    .button1:hover {
+        transform: scale(1.05); /* Scales the image to 110% of its original size on hover */
+
+</style>
+</head>
+<body>
+<audio id="audio" src="{{ url_for('static', filename='preference_writing.mp3') }}" ></audio>
+
+<div class="centered">
+      <input type="image" class="button1" id="Numbers" src="{{ url_for('static', filename='Numbers.png') }}" onclick="window.location.href='/numbers_interface'" alt="Numbers" width="400" height="400">
+    <input type="image" class="button1" id="alphabet" src="{{ url_for('static', filename='alphabet.png') }}" onclick="window.location.href='/index'" alt="alphabet" width="400" height="400">
+</div>
+
+<audio id="background-audio" autoplay loop>
+    <source src="{{ url_for('static', filename='PeriTune_Sugar_Sprinkle-chosic.com_.mp3') }}" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+<div class="Restart">
+    <input type="image" class="Restart-button" id="Restart-button" src="{{ url_for('static', filename='restart.png') }}" alt="start-button" width="50" height="50">
+</div>
+
+<script>
+    var audio = document.getElementById('background-audio');
+    audio.volume = 0.01; // Set the volume to 10% (very low)
+</script>
+
+<script>
+// Function to handle hover behavior and play the sound effect
+function handleHoverSound(button, soundFile) {
+    // Create an audio element for the hover sound effect
+    var hoverSound = new Audio(soundFile);
+
+    button.addEventListener('mouseenter', function() {
+        // Play the hover sound
+        hoverSound.play();
+    });
+
+    button.addEventListener('mouseleave', function() {
+        // Pause and reset the hover sound
+        hoverSound.pause();
+        hoverSound.currentTime = 0;
+    });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Get all button1 elements
+    var buttons = document.querySelectorAll('.button1');
+
+    // Define sound files for each button
+    var soundFiles = [
+        '{{ url_for('static', filename='num final.mp3') }}',
+        '{{ url_for('static', filename='alpha final.mp3') }}'
+    ];
+
+    // Add event listeners for hover behavior and sound effect to each button
+    buttons.forEach(function(button, index) {
+        handleHoverSound(button, soundFiles[index]);
+    });
+});
+</script>
+
+<iframe src="background_audio.html" style="display: none;"></iframe>
+
+</body>
+</html>
