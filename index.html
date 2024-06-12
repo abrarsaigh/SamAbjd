@@ -1,0 +1,1095 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SamAbjd alphabet</title>
+    <style>
+@import url('https://fonts.googleapis.com/earlyaccess/droidarabickufi.css');
+
+    body,html {
+        font-family: Arial, sans-serif;
+            background-image: url("{{ url_for('static', filename='Blue Green Colorful Daycare Center Presentation (2).png') }}");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            justify-content: space-between;
+  height: 100vh; /* Full height of the viewport */
+    width: 100vw; /* Full width of the viewport */0220
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent scrolling */
+
+            }
+
+    .toolbar {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1% 1%;;
+    background-color: #C2D9EB;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    height: 63px;
+    width: 98%; /* Set this to 100% instead of 102.5% to prevent overflow */
+    top: 0; /* Make sure the toolbar is at the top */
+    left: 0; /* Align to the left edge */
+    z-index: 2; /* Ensure it stays above other content */
+    position: fixed;
+    margin-top:0.5%;
+    margin-left:0.5%;
+    margin-right:0.5%;
+
+    }
+
+
+.rectangle {
+    position: fixed; /* Ensures the element is positioned relative to the viewport */
+    width: 40%; /* Adjusted from 800px, assuming 800px was a rough percentage of a typical viewport width */
+    height: 10%; /* 'auto' can be used if the content determines the height, or specify a % if needed */
+    left: 65%; /* Center align the rectangle, adjust as needed */
+    top: 87%; /* No change needed, already a percentage */
+    background: rgba(194, 217, 235, 0.8);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 50px; /* Generally kept as px to maintain the design */
+    transform: translateX(-50%); /* This centers the element horizontally */
+}
+
+.gesture {
+    display: flex;
+    position: fixed; /* Fixed position ensures it stays at a specific location */
+    bottom: 0; /* Align to bottom */
+    right: 0; /* Align to right */
+    cursor: pointer; /* Change cursor to indicate it's clickable */
+    margin-right: 1%;
+    margin-bottom: 1%;
+}
+
+    .button-wrapper {
+    position: relative;
+    margin-right: 3%; /* Adjust space between buttons */
+    z-index: 1;
+    }
+
+    .button1, .button {
+    border: none;
+    padding: 0;
+    margin-right: 10%; /* Adjust space between buttons */
+    }
+
+    .button {
+    margin-right: 3%;
+    margin-left: 2%;
+    }
+
+    .button1 {
+    margin-right: 10%;
+    }
+
+    .button1[type="image"], .button[type="image"] {
+    padding: 0;
+
+    }
+
+.AN{
+    display: flex;
+    position: fixed; /* Ensures the container stays in a fixed position */
+    top: 1; /* Aligns the container at the top of the viewport */
+    left: 0; /* Aligns the container at the left of the viewport */
+    margin-right: 10%;
+    margin-left: 5%;
+
+}
+
+    .main-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: calc(100vh - 20px); /* Adapts the height dynamically based on viewport height */
+    margin-top: 3%; /* Space above video */
+    position: fixed;
+    top: 60px; /* May need adjustment or conversion to % based on overall layout */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    }
+
+
+    .button{
+    padding: 5%;
+    margin-left: 1.5%; /* Space between Clear and Hint buttons */
+    margin-right: 2%;
+    }
+
+    .alphabets{
+    margin-left: 8%;
+    margin-right: 10%;
+    }
+
+    .lines{
+    margin-right: 10%;
+    }
+
+
+    .toolbar input[type="image"] {
+        transition: transform 0.4s ease-in-out; /* Adds a smooth transition effect */
+    }
+
+    .toolbar input[type="image"]:hover {
+        transform: scale(1.1); /* Scales the image to 110% of its original size on hover */
+    }
+
+    .gesture input[type="image"] {
+        transition: transform 0.4s ease-in-out; /* Adds a smooth transition effect */
+    }
+
+    .gesture input[type="image"]:hover {
+        transform: scale(1.1); /* Scales the image to 110% of its original size on hover */
+    }
+
+
+.arrows {
+        position: absolute;
+    width: 20%;
+    height: 20%;
+    left: 40%;
+    top: 87%;
+    position: fixed; /* Fixed position */
+    display: flex; /* Use flexbox to align children */
+    justify-content: space-between; /* Spaces the children (arrows) evenly across the container's width */
+
+}
+
+.arrow1, .arrow2 {
+    cursor: pointer; /* Makes the arrow look clickable */
+    margin-right: 60%;
+    margin-left: 40%;
+}
+
+
+.video-player {
+    background: #000;
+    width: 60%; /* Adjusted width as a percentage of the parent or viewport width */
+    height: 70%; /* Height is set to 0 */
+    margin: auto; /* Centering the video player horizontally */
+    position: absolute;
+    left: 40%; /* Centering the player relative to the viewport */
+    top: 16%; /* Position from top as a percentage of viewport height */
+    transform: translateX(-10%); /* Aligns the center of the player with the center of the viewport */
+    display: flex;
+}
+
+
+    .video-controls {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        display: flex;
+    }
+
+    .video-button {
+        margin: 0 5px;
+        display: flex;
+
+}
+
+.dropdown-container {
+    margin-top: 5%; /* Adjusted to percentage of the viewport height */
+    width: 30%; /* Adjusted width as a percentage of the parent or viewport width */
+    overflow: hidden; /* Ensures nothing spills outside the container */
+    border-radius: 15px; /* Larger rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
+    margin-left: 2%; /* Adjusted to percentage of the viewport or container width */
+}
+
+#choices-dropdown {
+    font-size: 1.8em; /* Increase the font size to make the dropdown bigger */
+    padding: 1.5% 2%; /* Increase padding for larger touch targets and visual size */
+    color: #fff; /* Set the text color */
+    background-color: #D9E4F2; /* Change the background color */
+    border: 2px solid #1F416C; /* Optionally style the border to match or contrast */
+    border-radius: 20px; /* Maintain rounded corners */
+    cursor: pointer; /* Ensure it's clear that the dropdown is interactive */
+    outline: none; /* Remove default focus outline */
+    width: 100%; /* Full width of the container */
+    -webkit-appearance: none; /* Removes default Chrome and Safari style */
+    -moz-appearance: none; /* Removes default style for Firefox */
+    appearance: none; /* Removes default style for modern browsers */
+}
+
+#choices-dropdown option:checked  {
+    background-color: #e0e0e0; /* Match the dropdown background */
+    color: #fff; /* Match the dropdown text color */
+<!--    padding: 0.5em 0.5em; /* Padding within each option */-->
+    margin: 1px 0; /* Space between options */
+    border: 1.5px solid #1F416C; /* Border around each option */
+        border-radius: 5px; /* Maintain rounded corners */
+
+}
+
+.Restart {
+    display: flex;
+    top: 90%;
+    bottom: 0; /* Align to bottom */
+    left: 0; /* Align to right */
+    position: fixed; /* Fixed position ensures it stays at a specific location */
+
+    text-align: center;
+}
+
+    .image-container{
+        position: absolute;
+        left: 55%;
+        top: 30%;
+        position: fixed; /* Fixed position */
+        display: flex; /* Use flexbox to align children */
+        justify-content: space-between; /* Spaces the children (arrows) evenly across the container's width */
+
+        }
+
+        .clicked {
+    filter: brightness(70%); /* Adjust the percentage to make the image darker */
+}
+
+#additional-image {
+    width: 20%; /* Adjust the width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Adjust the value to change the roundness */
+    position: fixed;
+    top: 60%;
+    right: 3%;
+    z-index: 100000;
+    display=none;
+  }
+
+
+
+#celebrate-image {
+    position: fixed;
+    top: 60%;
+    left: 30%;
+    z-index: 9999; /* Ensure the image is above other elements */
+}
+    #wrong-image {
+    position: fixed;
+    top: 60%;
+    left: 30%;
+    z-index: 9999; /* Ensure the image is above other elements */
+}
+
+
+    .video-container {
+        margin-top: 10%; /* Adjusted to percentage of the viewport height */
+    margin-left: 2%; /* Adjusted to percentage of the viewport height */
+        margin-bottom: -5%; /* Adjusted to percentage of the viewport height */
+
+    width: 30%;  /* Set the desired width */
+    height: 40%;  /* Set the desired height */
+    overflow: hidden;  /* Ensure content doesn't spill out */
+<!--    border: 1px solid #ccc;  /* Optional: add a border for visibility */-->
+    display: flex;  /* Allows centering video within container */
+    align-items: center;  /* Center the video vertically */
+    justify-content: center;  /* Center the video horizontally */
+
+    }
+
+#video-player {
+    max-width: 100%;  /* Ensure the video doesn't exceed container's width */
+    max-height: 100%;  /* Ensure the video doesn't exceed container's height */
+}
+
+
+#permission-modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            border-radius: 20px; /* Add rounded corners to the agree button */
+            font-family: 'Droid Arabic Kufi', Arial, sans-serif;
+
+
+}
+
+                .video-size {
+            width: 110%;
+            height: 100%;
+        }
+
+#agree-button {
+    background-color: #8BC34A;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 20px;
+    display: inline-block;
+     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+
+}
+
+#disagree-button {
+    background-color: #EF5350;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 20px;
+    display: inline-block;
+    margin-left: 20%;
+    margin-right: 3%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+
+#permission-modal h2 {
+
+        font-size: 16px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+
+}
+
+#permission-modal button {
+    color: #fff; /* Set the text color of the buttons */
+   font-size: 13px; /* Change the font size to your desired value */
+     font-family: 'Droid Arabic Kufi', Arial, sans-serif;
+     width: 25%;
+}
+
+</style>
+
+
+</head>
+<body>
+
+<div class="toolbar">
+
+    <div class="AN">
+
+    <div class="numbers">
+        <input type="image" class="button2" id="numbers" src="{{ url_for('static', filename='Numbers_icon.png') }}" alt="numbers" width="75" height="75">
+    </div>
+     <div class="alphabets">
+        <input type="image" class="button2" id="letters" src="{{ url_for('static', filename='letters_icon.png') }}" alt="letters" width="75" height="75">
+    </div>
+
+    </div>
+
+
+    <div class="lines">
+        <input type="image" class="button3" id="lines" src="{{ url_for('static', filename='tracing_icon.png') }}" alt="lines" width="75" height="75">
+<!--        <div class="white-shadow"></div>-->
+    </div>
+
+    <div class="button-wrapper">
+        <input type="image" class="button1" id="white_color" src="{{ url_for('static', filename='whiteCloud.png') }}" alt="White" width="75" height="75">
+<!--        <div class="white-shadow"></div>-->
+    </div>
+
+    <div class="button-wrapper">
+        <input type="image" class="button1" id="red_color" src="{{ url_for('static', filename='redCloud.png') }}" alt="Red" width="75" height="75">
+<!--        <div class="white-shadow"></div>-->
+    </div>
+
+    <div class="button-wrapper">
+        <input type="image" class="button1" id="blue_color" src="{{ url_for('static', filename='blueCloud.png') }}" alt="Blue" width="75" height="75">
+<!--        <div class="white-shadow"></div>-->
+    </div>
+
+    <div class="button-wrapper">
+        <input type="image" class="button1" id="green_color" src="{{ url_for('static', filename='greenCloud.png') }}" alt="Green" width="75" height="75">
+<!--        <div class="white-shadow"></div>-->
+    </div>
+
+    <input type="image" class="button" id="clear_button" src="{{ url_for('static', filename='eraser-icon.png') }}" alt="Clear" width="75" height="75">
+
+<input type="image" class="button" id="hint" src="{{ url_for('static', filename='Tutorial-icon.png') }}" alt="Tutorial" width="75" height="75">
+</div>
+
+
+<div class="gesture">
+        <input type="image" class="gesture" id="gesture" src="{{ url_for('static', filename='Gesture_icon.png') }}" alt="gesture" width="75" height="75">
+</div>
+
+<!-- Add a container for the additional image -->
+<div id="additional-image-container">
+    <!-- Initially hidden image -->
+<!--<img id="additional-image" src="{{ url_for('static', filename='gesture-video.gif') }}" alt="Additional Image" style="display: none;">-->
+    <video id="additional-image" loop style="display: none;">
+        <source src="{{ url_for('static', filename='gesturevideo.mp4') }}" type="video/mp4">
+    </video>
+</div>
+
+
+<!-- Video player for the letters-->
+<div class="video-container">
+    <video id="video-player" controls autoplay loop>
+        <source id="video-source" src="" type="video/mp4">  <!-- Initially no source -->
+    </video>
+</div>
+
+
+    <!-- Dropdown list container -->
+
+
+<div class="dropdown-container">
+    <select id="choices-dropdown" name="choices" style="text-align-last:right;" size="5" >
+<option value="" disabled selected style="background-image: url('{{ url_for('static', filename='list-image.png') }}');background-repeat: no-repeat; background-position: right; padding-right: 200px; background-size: 80px 33px;"></option>
+        <!-- Add options for each choice -->
+        <option value="1" style="font-size: 25px; color: #AA3063; font-family: Arial, sans-serif;font-weight: bold;" selected>أ</option>
+        <option value="2" style="font-size: 25px; color: #AA3063; font-family: Arial, sans-serif;font-weight: bold;">ب</option>
+        <option value="3" style="font-size: 25px; color: #AA3063; font-family: Arial, sans-serif;font-weight: bold;">ت</option>
+        <option value="4" style="font-size: 25px; color: #AA3063; font-family: Arial, sans-serif;font-weight: bold;">ث</option>
+        <option value="5" style="font-size: 25px; color: #AA3063; font-family: Arial, sans-serif; font-weight: bold;">ج</option>
+        <option value="6" style="font-size: 25px; color: #AA3063; font-family: Arial, sans-serif; font-weight: bold;">ح</option>
+        <option value="7" style="font-size: 25px; color: #AA3063; font-family: Arial, sans-serif;font-weight: bold;">خ</option>
+        <option value="8" style="font-size: 25px; color: #AA3063; font-family: Arial, sans-serif;font-weight: bold;">د</option>
+        <option value="9" style="font-size: 25px; color: #AA3063; font-family: Arial, sans-serif;font-weight: bold;">ذ</option>
+        <option value="10" style="font-size: 25px; color: #AA3063; font-family: Arial, sans-serif;font-weight: bold;">ر</option>
+        <option value="11" style="font-size: 25px; color: #AA3063; font-family: Arial, sans-serif;font-weight: bold;">ز</option>
+        <option value="12" style="font-size: 25px; color: #AA3063; font-family: Arial, sans-serif;font-weight: bold;">س</option>
+        <option value="13" style="font-size: 25px; color: #AA3063; font-family: Arial, sans-serif;font-weight: bold;">ش</option>
+        <option value="14" style="font-size: 25px; color: #AA3063; font-family: Arial, sans-serif;font-weight: bold;">ص</option>
+        <option value="15" style="font-size: 25px; color: #AA3063; font-family: Arial, sans-serif;font-weight: bold;">ض</option>
+        <option value="16" style="font-size: 25px; color: #AA3063; font-family: Arial, sans-serif;font-weight: bold;">ط</option>
+        <option value="17" style="font-size: 25px; color: #AA3063; font-family: Arial, sans-serif;font-weight: bold;">ظ</option>
+        <option value="18" style="font-size: 25px; color: #AA3063; font-family: Arial, sans-serif;font-weight: bold;">ع</option>
+        <option value="19" style="font-size: 25px; color: #AA3063; font-family: Arial, sans-serif;font-weight: bold;">غ</option>
+        <option value="20" style="font-size: 25px; color: #AA3063; font-family: Arial, sans-serif;font-weight: bold;">ف</option>
+        <option value="21" style="font-size: 25px; color: #AA3063; font-family: Arial, sans-serif;font-weight: bold;">ق</option>
+        <option value="22" style="font-size: 25px; color: #AA3063; font-family: Arial, sans-serif;font-weight: bold;">ك</option>
+        <option value="23" style="font-size: 25px; color: #AA3063; font-family: Arial, sans-serif;font-weight: bold;">ل</option>
+        <option value="24" style="font-size: 25px; color: #AA3063; font-family: Arial, sans-serif;font-weight: bold;">م</option>
+        <option value="25" style="font-size: 25px; color: #AA3063; font-family: Arial, sans-serif;font-weight: bold;">ن</option>
+        <option value="26" style="font-size: 25px; color: #AA3063; font-family: Arial, sans-serif;font-weight: bold;">ھ</option>
+        <option value="27" style="font-size: 25px; color: #AA3063; font-family: Arial, sans-serif;font-weight: bold;">و</option>
+        <option value="28" style="font-size: 25px; color: #AA3063; font-family: Arial, sans-serif;font-weight: bold;">ي</option>
+    </select>
+</div>
+
+<div class="video-player">
+    <div>
+        <img id="video_feed" class="video-size" style="display:none;" />
+    </div>
+</div>
+
+<div class="image-container">
+    <img id="image-display" src="" alt="Selected Image" style="display: none; width: 300px; height: 300px;"> <!-- Adjust size as needed -->
+</div>
+
+<div class="rectangle"></div>
+
+<div class="arrows">
+    <input type="image" class="arrow1" id="arrow1" src="{{ url_for('static', filename='arrow1.png') }}" alt="arrow1" width="80" height="70">
+<span id="current-letter" style="font-size: 50px; color: #AA3063; font-family: Arial, sans-serif; font-weight: bold; text-align: center;">أ</span> <!-- Initial letter -->
+    <input type="image" class="arrow2" id="arrow2" src="{{ url_for('static', filename='arrow2.png') }}" alt="arrow2" width="80" height="70">
+</div>
+
+<div class="Restart">
+    <input type="image" class="Restart-button" id="Restart-button" src="{{ url_for('static', filename='restart.png') }}" alt="start-button" width="50" height="50">
+</div>
+
+<img id="celebrate-image" src="{{ url_for('static', filename='celebrate-image.gif') }}" style="display: none;" alt="celebrate" width="300" height="300">
+
+<audio id="celebrate-audio" src="{{ url_for('static', filename='celebrate_audio.mp3') }}" ></audio>
+
+<img id="wrong-image" src="{{ url_for('static', filename='wrong.gif') }}" style="display: none;" alt="wrong" width="300" height="300">
+<audio id="wronganswer" src="{{ url_for('static', filename='tryAgain.mp3') }}" loop="false"></audio>
+<audio id="excellent_audio" src="{{ url_for('static', filename='excellent.mp3') }}" ></audio>
+
+<audio id="background-audio" autoplay loop>
+    <source src="{{ url_for('static', filename='PeriTune_Sugar_Sprinkle-chosic.com_.mp3') }}" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+    <div id="permission-modal" style="display: none;">
+        <h2>هل تسمح لسماء أبجد بالوصول للكاميرا الخاصة بك؟</h2>
+        <button id="disagree-button">لا اسمح</button>
+        <button id="agree-button">نعم اسمح</button>
+
+    </div>
+
+ </div>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const modal = document.getElementById('permission-modal');
+        const agreeButton = document.getElementById('agree-button');
+        const disagreeButton = document.getElementById('disagree-button');
+        const videoFeed = document.getElementById('video_feed');
+        const clearButton = document.getElementById('clear_button');
+        const tutorialIcon = document.getElementById('hint');
+        let cameraPermissionRequested = false;
+
+        function showPopup() {
+            // Remove existing popup if present
+            const existingPopup = document.getElementById('video-popup');
+            if (existingPopup) {
+                document.body.removeChild(existingPopup);
+            }
+
+            // Create the popup video element
+            var popup = document.createElement("div");
+            popup.id = 'video-popup';
+            popup.style.display = "block";
+            popup.style.position = "fixed";
+            popup.style.top = "0";
+            popup.style.left = "0";
+            popup.style.width = "100%";
+            popup.style.height = "100%";
+            popup.style.background = "rgba(0, 0, 0, 0.83)";
+            popup.style.zIndex = "999";
+
+            var video = document.createElement("video");
+            video.src = "static/TutorialVideo.mp4";
+            video.style.display = "block";
+            video.style.margin = "auto";
+            video.style.maxWidth = "100%";
+            video.style.maxHeight = "100%";
+            video.controls = true; // Show video controls
+
+            // Create the close button to remove the popup
+            var closeButton = document.createElement("button");
+            closeButton.style.display = "block";
+            closeButton.style.margin = "20px auto"; // Add margin to move the button away from the video
+            closeButton.style.width = "70px";
+            closeButton.style.height = "70px";
+            closeButton.style.background = "none";
+            closeButton.style.border = "none";
+            closeButton.style.cursor = "pointer";
+            closeButton.style.backgroundImage = "url('{{ url_for('static', filename='back-button (1).png') }}')"; // Adjust the image path as needed
+            closeButton.style.backgroundSize = "cover";
+            closeButton.addEventListener("click", function() {
+                document.body.removeChild(popup);
+                if (!cameraPermissionRequested) {
+                    modal.style.display = 'block';
+                }
+            });
+
+            // Append the video and close button to the popup element
+            popup.appendChild(video);
+
+            // Create a container div for the button
+            var buttonContainer = document.createElement("div");
+            buttonContainer.style.textAlign = "center";
+            buttonContainer.appendChild(closeButton);
+
+            // Append the button container to the popup element
+            popup.appendChild(buttonContainer);
+
+            // Append the popup element to the body
+            document.body.appendChild(popup);
+        }
+
+        // Handle user's response
+        agreeButton.addEventListener('click', function() {
+            modal.style.display = 'none'; // Hide the modal
+            cameraPermissionRequested = true;
+
+            // Send a request to the backend to open the camera
+            fetch('/open_camera', { method: 'POST' })
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data.message);
+
+                    // Start fetching the video feed
+                    videoFeed.style.display = 'block';
+                    videoFeed.src = "/video_feed";
+                })
+                .catch(error => console.error('Error:', error));
+        });
+
+        disagreeButton.addEventListener('click', function() {
+            // Handle the case where the user does not agree
+            modal.style.display = 'none'; // Hide the modal
+            console.log('User did not agree to open the camera.');
+        });
+
+        // Attach the showPopup function to the tutorial icon's click event
+        tutorialIcon.addEventListener('click', showPopup);
+
+        // Call the function to show the video popup on page load
+        showPopup();
+
+        // Event listener for the clear button
+        clearButton.addEventListener('click', function() {
+            fetch('/clear_video_feed', { method: 'POST' })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        const videoElement = document.getElementById('video_feed');
+                        videoElement.src = '';  // Clears the current video feed source
+                        videoElement.src = "{{ url_for('video_feed') }}";  // Optionally, reset to initial video feed
+                    }
+                })
+                .catch(error => console.error('Error:', error));
+        });
+    });
+</script>
+
+
+
+<script>
+    var audio = document.getElementById('background-audio');
+    audio.volume = 0.01; // Set the volume to 10% (very low)
+</script>
+
+
+
+
+
+<script>
+
+    const arrow1 = document.getElementById('arrow1');
+    arrow1.addEventListener('click', function() {
+        fetch('/clear_video_feed', { method: 'POST' })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    const videoElement = document.getElementById('video_feed');
+                    videoElement.src = '';  // Clears the current video feed source
+                    videoElement.src = "{{ url_for('video_feed') }}";  // Optionally, reset to initial video feed
+                }
+            })
+            .catch(error => console.error('Error:', error));
+    });
+
+    const arrow2 = document.getElementById('arrow2');
+    arrow2.addEventListener('click', function() {
+        fetch('/clear_video_feed', { method: 'POST' })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    const videoElement = document.getElementById('video_feed');
+                    videoElement.src = '';  // Clears the current video feed source
+                    videoElement.src = "{{ url_for('video_feed') }}";  // Optionally, reset to initial video feed
+                }
+            })
+            .catch(error => console.error('Error:', error));
+    });
+});
+
+
+    // Play audio on button click
+    document.getElementById('Restart-button').addEventListener('click', function () {
+        var audio = document.getElementById('audio');
+        audio.currentTime = 0;
+        audio.play();
+    });
+</script>
+
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Get all button elements by their IDs
+    var buttons = {
+      'numbers': document.getElementById('numbers'),
+      'letters': document.getElementById('letters'),
+      'lines': document.getElementById('lines'),
+      'white_color': document.getElementById('white_color'),
+      'red_color': document.getElementById('red_color'),
+      'blue_color': document.getElementById('blue_color'),
+      'green_color': document.getElementById('green_color'),
+      'clear_button': document.getElementById('clear_button'),
+      'hint': document.getElementById('hint'),
+      'gesture': document.getElementById('gesture')
+    };
+
+    // Create an audio element for the sound effect
+    var clickSound = new Audio('{{ url_for('static', filename='pop.mp3') }}'); // Replace 'click-sound.mp3' with your sound file
+
+    // Function to handle the click event on a button
+    function handleButtonClick(buttonId) {
+      // Play the click sound
+      clickSound.play();
+
+      var button = buttons[buttonId];
+      var isClicked = button.classList.contains('clicked');
+
+      // If the button is already clicked, remove the 'clicked' class
+      if (isClicked) {
+        button.classList.remove('clicked');
+      } else {
+        // If the button is not clicked, remove the 'clicked' class from all other buttons
+        for (var id in buttons) {
+          if (id !== buttonId) {
+            buttons[id].classList.remove('clicked');
+          }
+        }
+
+        // Add the 'clicked' class to the current button
+        button.classList.add('clicked');
+      }
+
+      // If it's a color button, change color
+      if (buttonId === 'white_color' || buttonId === 'red_color' || buttonId === 'blue_color' || buttonId === 'green_color') {
+        let color = buttonId.split('_')[0]; // Gets 'white', 'red', 'blue', 'green', etc. from the button id
+        fetch('/change_color', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ color: color }),
+        })
+          .then(response => response.json())
+          .then(data => {
+            if (data.success) {
+              console.log('Color changed to ' + color);
+            }
+          })
+          .catch(error => console.error('Error:', error));
+      }
+    }
+
+    // Add click event listener to each button
+    for (var id in buttons) {
+      buttons[id].addEventListener('click', handleButtonClick.bind(null, id));
+    }
+  });
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const choicesDropdown = document.getElementById('choices-dropdown');
+
+    choicesDropdown.addEventListener('change', function() {
+        const selectedValue = this.value;
+        console.log('Selected value is: ', selectedValue); // Check if the value is captured correctly
+
+        fetch('/set_target_value', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ target_value: selectedValue }),
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Response from server:', data); // Check the response from the server
+        })
+        .catch(error => console.error('Error:', error));
+    });
+});
+</script>
+
+<script>
+ document.addEventListener('DOMContentLoaded', function() {
+    const choicesDropdown = document.getElementById('choices-dropdown');
+
+    choicesDropdown.addEventListener('change', function() {
+        const selectedValue = this.value;
+        console.log('Selected value is: ', selectedValue); // Check if the value is captured correctly
+
+        fetch('/set_target_value', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ target_value: selectedValue }),
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Response from server:', data); // Check the response from the server
+        })
+        .catch(error => console.error('Error:', error));
+
+        highlightSelectedOption(choicesDropdown);
+    });
+
+    function highlightSelectedOption(dropdown) {
+        // Remove 'selected' class from all options
+        dropdown.querySelectorAll('option').forEach(option => {
+            option.classList.remove('selected');
+        });
+
+        // Add 'selected' class to the selected option
+        const selectedIndex = dropdown.selectedIndex;
+        dropdown.options[selectedIndex].classList.add('selected');
+    }
+});
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const imageDisplayArea = document.getElementById('image-display');
+    const choicesDropdown = document.getElementById('choices-dropdown');
+    let isImageLocked = true;
+
+    function updateImageDisplay() {
+        const selectedValue = choicesDropdown.value;
+
+        if (!selectedValue) {
+            console.error('No selection made.');
+            return;
+        }
+
+        const imageUrl = `/static/tracingLetters/tracing_${selectedValue}.png`;
+
+        if (!isImageLocked) {
+            if (imageDisplayArea.src === imageUrl) {
+                imageDisplayArea.style.display = 'none';
+            } else {
+                imageDisplayArea.src = imageUrl;
+                imageDisplayArea.style.display = 'block';
+            }
+        } else {
+            console.error('Image is locked.');
+        }
+    }
+
+    // Handle clicks on the tracing icon to toggle the lock status
+    const tracingIcon = document.getElementById('lines');
+    if (tracingIcon) {
+        tracingIcon.addEventListener('click', function() {
+            isImageLocked = !isImageLocked;
+            if (!isImageLocked) {
+                updateImageDisplay();
+            } else {
+                imageDisplayArea.style.display = 'none';
+            }
+        });
+    } else {
+        console.error('Tracing icon not found.');
+    }
+
+    // Handle changes in dropdown selection to update the image accordingly
+    if (choicesDropdown) {
+        choicesDropdown.addEventListener('change', function() {
+            if (!isImageLocked) {
+                const selectedValue = choicesDropdown.value;
+                const imageUrl = `/static/tracingLetters/tracing_${selectedValue}.png`;
+                imageDisplayArea.src = imageUrl;
+                imageDisplayArea.style.display = 'block';
+            }
+        });
+    } else {
+        console.error('Choices dropdown not found.');
+    }
+});
+
+</script>
+<!-- Ensure that jQuery is included -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script>
+
+document.addEventListener('DOMContentLoaded', function() {
+    const arrow1 = document.getElementById('arrow2');
+    const arrow2 = document.getElementById('arrow1');
+    const dropdown = document.getElementById('choices-dropdown');
+    const currentLetter = document.getElementById('current-letter');
+
+    // Function to update the displayed letter and fetch new video data
+    function updateLetterAndVideo() {
+        currentLetter.textContent = dropdown.options[dropdown.selectedIndex].text;
+
+        // Get the selected ID from the dropdown
+        var selectedId = dropdown.value;
+
+        // Fetch the corresponding video data from Flask
+        $.get('/video/' + selectedId, function(data) {
+            if (data.error) {
+                console.error('Error:', data.error);
+            } else {
+                // Update the video player with the new source
+                $('#video-source').attr('src', data.file_path);
+                document.getElementById('video-player').load();  // Reload the video player
+            }
+        });
+    }
+
+    // Handle arrow1 click - Next item
+    arrow1.addEventListener('click', function() {
+        if (dropdown.selectedIndex < dropdown.options.length - 1) {
+            dropdown.selectedIndex++;
+        } else {
+            dropdown.selectedIndex = 1; // Loop back to the first item
+        }
+        updateLetterAndVideo(); // Update the displayed letter and fetch the corresponding video
+        dropdown.dispatchEvent(new Event('change')); // Manually trigger the change event
+    });
+
+// Handle arrow2 click - Previous item (ignoring the first option)
+arrow2.addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default behavior of changing the selected index
+
+    // Get the index of the previous item, ignoring the first option
+    let previousIndex = dropdown.selectedIndex > 1 ? dropdown.selectedIndex - 1 : dropdown.options.length - 1;
+
+    dropdown.selectedIndex = previousIndex;
+    updateLetterAndVideo(); // Update the displayed letter and fetch the corresponding video
+    dropdown.dispatchEvent(new Event('change')); // Manually trigger the change event
+});
+
+    // Handle direct dropdown changes
+    dropdown.addEventListener('change', updateLetterAndVideo);
+
+    // Initially set the correct letter and video when the page loads
+    updateLetterAndVideo();
+});
+</script>
+
+
+<!-- JavaScript -->
+<script>
+    // Get the gesture image
+    const gestureImage = document.getElementById('gesture');
+
+    // Get the additional image (video in this case)
+    const additionalImage = document.getElementById('additional-image');
+
+    // Add click event listener to the gesture image
+    gestureImage.addEventListener('click', function() {
+        // Check if the additional image (video) is visible
+        const isAdditionalImageVisible = additionalImage.style.display === 'block';
+
+        if (isAdditionalImageVisible) {
+            // Hide the additional image (video)
+            additionalImage.style.display = 'none';
+            // Pause and reset the video
+            additionalImage.pause();
+            additionalImage.currentTime = 0;
+        } else {
+            // Show the additional image (video)
+            additionalImage.style.display = 'block';
+            // Reset and play the video from the beginning
+            additionalImage.currentTime = 0;
+            additionalImage.play();
+        }
+    });
+</script>
+
+<script>
+function checkFlag() {
+    fetch('/check_correct')
+        .then(response => response.json())
+        .then(data => {
+            if (data.is_correct) {
+                // Show your image here
+                document.getElementById('celebrate-image').style.display = 'block';
+                console.log("Correct flag is true. Show image.");
+
+                // Play the audio
+                document.getElementById('celebrate-audio').play();
+                document.getElementById('excellent_audio').play(); // Play the excellent audio
+                console.log("Audio played.");
+
+                // Decrease the volume of celebrate-audio
+                document.getElementById('celebrate-audio').volume = 0.5; // Set volume to 50% (0.5)
+            }
+            else {
+                // Hide the image if the flag is false
+                document.getElementById('celebrate-image').style.display = 'none';
+                console.log("Correct flag is false. Hide image.");
+
+                // Stop the audio and set playback position to the beginning
+                let audio = document.getElementById('celebrate-audio');
+                audio.pause();
+                audio.currentTime = 0;
+
+
+                let audio2 = document.getElementById('excellent_audio');
+                audio2.pause();
+                audio2.currentTime = 0;
+
+                console.log("Audio stopped.");
+
+            }
+
+            if (data.is_not_correct) {
+                document.getElementById('wrong-image').style.display = 'block';
+                console.log("Correct flag is true. Show image.");
+
+                // Play the audio for not correct
+                document.getElementById('wronganswer').play();
+                console.log("Loss audio played.");
+            }
+            else {
+                document.getElementById('wrong-image').style.display = 'none';
+                console.log("Correct flag is false. Hide image.");
+
+                // Stop the audio for not correct and set playback position to the beginning
+                let audio = document.getElementById('wronganswer');
+                audio.pause();
+                audio.currentTime = 0;
+                console.log("Loss audio stopped.");
+            }
+
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
+
+// Periodically check for updates
+setInterval(checkFlag, 1000); // Check every second
+</script>
+
+
+
+<script>
+// Function to handle hover behavior and play the sound effect
+function handleHoverSound(image) {
+    // Create an audio element for the hover sound effect
+    var hoverSound = new Audio('{{ url_for('static', filename='multipop.mp3') }}'); // Replace 'hover-sound.mp3' with your sound file
+
+    image.addEventListener('mouseenter', function() {
+        // Play the hover sound
+        hoverSound.play();
+    });
+
+    image.addEventListener('mouseleave', function() {
+        // Pause and reset the hover sound
+        hoverSound.pause();
+        hoverSound.currentTime = 0;
+    });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Get all input images
+    var inputImages = document.querySelectorAll('.toolbar input[type="image"], .gesture input[type="image"]');
+
+    // Add event listeners for hover behavior and sound effect
+    inputImages.forEach(function(image) {
+        handleHoverSound(image);
+    });
+});
+</script>
+
+<script>
+    // Function to handle hover behavior and play the sound effect
+function handleHoverSound(button) {
+    // Create an audio element for the hover sound effect
+    var hoverSound = new Audio('{{ url_for('static', filename='multipop.mp3') }}'); // Replace 'multipop.mp3' with your sound file
+
+    button.addEventListener('mouseenter', function() {
+        // Play the hover sound
+        hoverSound.play();
+    });
+
+    button.addEventListener('mouseleave', function() {
+        // Pause and reset the hover sound
+        hoverSound.pause();
+        hoverSound.currentTime = 0;
+    });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Get all button1 elements
+    var buttons = document.getElementsByClassName('button1');
+
+    // Add event listeners for hover behavior and sound effect
+    for (var i = 0; i < buttons.length; i++) {
+        handleHoverSound(buttons[i]);
+    }
+});
+</script>
+
+<iframe src="background_audio.html" style="display: none;"></iframe>
+</body>
+</html>
+

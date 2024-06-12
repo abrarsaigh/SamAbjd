@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Start Page</title>
+    <style>
+        body, html {
+            background-image: url("{{ url_for('static', filename='startBackground.png') }}");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .centered {
+            position: absolute;
+            left: 51%;
+            top: 71%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .Restart {
+    display: flex;
+    top: 90%;
+    bottom: 0; /* Align to bottom */
+    left: 0; /* Align to right */
+    position: fixed; /* Fixed position ensures it stays at a specific location */
+
+    text-align: center;
+        }
+
+    @font-face {
+            font-family: 'DG Jory';
+            src: url("{{ url_for('static', filename='DG-Jory-Reg.ttf') }}") format('truetype');
+        }
+
+    #text {
+    position: absolute;
+    top: 49%;
+    left: 43%;
+    text-align: center;
+    font-size: 40px;
+    font-family: 'DG jory';
+    color: #C76B32;
+    }
+
+        input {
+            padding: 10px;
+            margin: 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+         .start-button:hover {
+        transform: scale(1.05); /* Scales the image to 110% of its original size on hover */
+
+
+    </style>
+</head>
+<body>
+<div id="text"></div>
+<audio id="audio" src="{{ url_for('static', filename='intro1.mp3') }}" ></audio>
+
+<audio id="background-audio" autoplay loop>
+    <source src="{{ url_for('static', filename='PeriTune_Sugar_Sprinkle-chosic.com_.mp3') }}" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+<div class="centered">
+    <!-- Button to navigate to index.html -->
+    <input type="image" class="start-button" id="start-button" src="{{ url_for('static', filename='start_button_img.png') }}" onclick="window.location.href='/SelectWritingPreference_Interface'" alt="start-button" width="500" height="300">
+</div>
+
+<div class="Restart">
+    <input type="image" class="Restart-button" id="Restart-button" src="{{ url_for('static', filename='restart.png') }}" alt="start-button" width="50" height="50">
+</div>
+
+
+<script>
+    var audio = document.getElementById('background-audio');
+    audio.volume = 0.01; // Set the volume to 10% (very low)
+</script>
+
+
+<script>
+    // Play audio using the Web Audio API when the page is loaded
+    window.addEventListener('load', function () {
+        var audio = document.getElementById('audio');
+        var context = new AudioContext();
+
+        // Load audio file as a buffer
+        var request = new XMLHttpRequest();
+        request.open('GET', audio.src, true);
+        request.responseType = 'arraybuffer';
+
+        request.onload = function () {
+            context.decodeAudioData(request.response, function (buffer) {
+                var source = context.createBufferSource();
+                source.buffer = buffer;
+                source.connect(context.destination);
+                source.start(0);
+            });
+        };
+
+        request.send();
+    });
+
+    // Play audio on button click
+    document.getElementById('Restart-button').addEventListener('click', function () {
+        var audio = document.getElementById('audio');
+        audio.currentTime = 0;
+        audio.play();
+    });
+</script>
+
+<script>
+    var text = "للكتابة على الهواء";
+    var index = 0;
+    var speed = 200; // Adjust speed as needed (milliseconds per letter)
+
+    function typeWriter() {
+        if (index < text.length) {
+            document.getElementById("text").innerHTML += text.charAt(index);
+            index++;
+            setTimeout(typeWriter, speed);
+        }
+    }
+
+    typeWriter();
+</script>
+
+</body >
+</html>
